@@ -832,7 +832,7 @@ class Institution(models.Model):
         choices=PRODUCTION_STATES,
         default=PRODUCTION_STATES.ACTIVE
     )
-    short_name = models.CharField(max_length=10, blank=True, help_text=_("Institution's shortname according to https://en.wikipedia.org/wiki/List_of_universities_in_Malaysia"))
+    short_name = models.CharField(max_length=10, blank=True, help_text=_("Institution's shortname/acronym"))
 
     def __str__(self):
         return "%s" % ', '.join([i.name for i in self.org_name.all()])
